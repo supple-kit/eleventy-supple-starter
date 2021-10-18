@@ -1,0 +1,38 @@
+{
+  "name": "@supple-kit/eleventy-supple-starter",
+  "version": "0.0.1",
+  "description": "A Supple http://11ty.dev starterkit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supple-kit/eleventy-supple-starter.git"
+  },
+  "keywords": [
+    "eleventy",
+    "slinkity",
+    "supple",
+    "supple-kit",
+    "supple-css",
+    "11ty",
+    "starterkit"
+  ],
+  "author": "Bram Smulders <source@bram.is>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supple-kit/eleventy-supple-starter/issues"
+  },
+  "homepage": "https://github.com/supple-kit/eleventy-supple-starter#readme",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://www.github.com/sponsors/bramsmulders"
+    },
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.me/smuldersbram/EUR"
+    }
+  ]
+}
