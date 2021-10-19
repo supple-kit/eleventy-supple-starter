@@ -4,7 +4,10 @@
 	"description": "A Supple http://11ty.dev starterkit",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "echo \"Add linting\" && exit 1",
+		"start": "npx slinkity --serve",
+		"build": "npx slinkity"
 	},
 	"repository": {
 		"type": "git",
