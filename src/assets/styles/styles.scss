@@ -1,4 +1,52 @@
-* {
-	color: #ff0000;
-	outline: 1px solid #00ff00;
-}
+/*  =========================================================================
+    Styles manifest files
+    Extends Supple-CSS, a reliable and testable Sass framework in its
+    truest sense.
+/   ========================================================================= */
+
+/*  Settings
+/   ========================================================================= */
+
+@use 'node_modules/@supple-kit/supple-css/settings/defaults';
+
+/*  Tools
+/   ========================================================================= */
+
+// Import your tools in the modules you need them
+
+/*  Generic
+/   ========================================================================= */
+
+@use 'node_modules/@supple-kit/supple-css/generic/reset';
+
+/*  Elements
+/   ========================================================================= */
+
+/* Add your own, yo */
+
+/*  Objects
+/   ========================================================================= */
+
+@use 'node_modules/@supple-kit/supple-css/objects/list-clean';
+@use 'node_modules/@supple-kit/supple-css/objects/layout';
+@use 'node_modules/@supple-kit/supple-css/objects/mesh';
+@use 'node_modules/@supple-kit/supple-css/objects/retain';
+@use 'node_modules/@supple-kit/supple-css/objects/aspect-ratio';
+@use 'node_modules/@supple-kit/supple-css/objects/flow';
+
+/*  Components
+/   ========================================================================= */
+
+/* Add your own, yo */
+
+/*  Utilities
+/   ========================================================================= */
+
+@use 'node_modules/@supple-kit/supple-css/utilities/columns';
+@use 'node_modules/@supple-kit/supple-css/utilities/colspan';
+@use 'node_modules/@supple-kit/supple-css/utilities/colstart';
+@use 'node_modules/@supple-kit/supple-css/utilities/offset';
+@use 'node_modules/@supple-kit/supple-css/utilities/clearfix';
+@use 'node_modules/@supple-kit/supple-css/utilities/spacing';
+@use 'node_modules/@supple-kit/supple-css/utilities/visually-hidden';
+@use 'node_modules/@supple-kit/supple-css/utilities/hidden';
