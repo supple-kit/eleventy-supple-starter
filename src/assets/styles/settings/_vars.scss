@@ -1,0 +1,27 @@
+/* ==========================================================================
+		settings.vars
+		Project specific variables & Supple-CSS overrides.
+/ =========================================================================== */
+
+/* --------------------------------------------------------------------------
+		Overrides
+/ --------------------------------------------------------------------------- */
+
+@use 'node_modules/@supple-kit/supple-css/settings/defaults';
+
+/**
+ * If you want to override some variables of a specific Supple-CSS module you
+ * can import the specific `variables` file and overwrite the settings here, eg:
+ *
+@use 'node_modules/@supple-kit/supple-css/objects/layout/variables' with (
+  $gaps: (
+    'base',
+    'tiny',
+  )
+);
+ *
+ */
+
+/* --------------------------------------------------------------------------
+		Your own variables
+/ --------------------------------------------------------------------------- */
