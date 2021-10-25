@@ -39,7 +39,7 @@
 		}
 	],
 	"devDependencies": {
-		"@11ty/eleventy": "^1.0.0-beta.2",
+		"@11ty/eleventy": "1.0.0-beta.2",
 		"@babel/eslint-parser": "^7.15.8",
 		"@babel/preset-react": "^7.14.5",
 		"@supple-kit/prettier-config": "^1.0.1",
