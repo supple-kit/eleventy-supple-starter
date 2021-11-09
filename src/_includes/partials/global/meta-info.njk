@@ -1,0 +1,35 @@
+{% set pageTitle = title + ' | ' + metadata.name %}
+{% set currentUrl = metadata.url + page.url %}
+
+{% if metaTitle %}
+	{% set pageTitle = metaTitle %}
+{% endif %}
+
+<title>{{ pageTitle }}</title>
+<link rel="canonical" href="{{ currentUrl }}" />
+
+<meta property="og:site_name" content="{{ metadata.name }}" />
+<meta property="og:title" content="{{ pageTitle }}" />
+<meta name="twitter:title" content="{{ pageTitle }}">
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ currentUrl }}" />
+
+{% if metaDesc %}
+	<meta name="description" content="{{ metaDesc }}" />
+	<meta name="twitter:description" content="{{ metaDesc }}" />
+	<meta property="og:description" content="{{ metaDesc }}" />
+{% endif %}
+
+{% if socialImage %}
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="og:image" content="{{ socialImage }}" />
+	<meta name="twitter:image" content="{{ socialImage }}" />
+	<meta property="og:image:alt" content="Page image for {{ metadata.name }}" />
+	<meta name="twitter:image:alt" content="Page image for {{ metadata.name }}" />
+{% endif %}
+
+{% if site.paymentPointer %}
+	<meta name="monetization" content="{{ site.paymentPointer }}" />
+{% endif %}
+
+<meta name="theme-color" content="{{ metadata.backgroundColor }}"/>
