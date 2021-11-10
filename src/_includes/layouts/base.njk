@@ -10,9 +10,9 @@
     <a href="#main-content">Skip to content</a>
     <header>
       <a href="/">{{ metadata.name }}</a>
-      <ul class="nav">
+      <ul>
       {%- for entry in collections.pages | eleventyNavigation %}
-        <li class="nav__item{% if entry.url in page.url %}  is-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+        <li class="{% if entry.url in page.url %}  is-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
       {%- endfor %}
       </ul>
     </header>
