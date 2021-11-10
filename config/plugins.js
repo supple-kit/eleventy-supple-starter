@@ -1,10 +1,10 @@
 /**
  * Add Eleventy plugins here
  */
-// const PLUGIN_NAME = require('plugin-npm-package');
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 
 module.exports = {
-	// metagen: (eleventyConfig) => {
-	// 	eleventyConfig.addPlugin(PLUGIN_NAME);
-	// },
+	eleventyNavigation: (eleventyConfig) => {
+		eleventyConfig.addPlugin(eleventyNavigationPlugin);
+	},
 };

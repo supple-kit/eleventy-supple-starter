@@ -1,9 +1,9 @@
 ---
-title: Look ma, it's eleventy-supple-starter!
+title: Contact
 layout: layouts/base.njk
-permalink: index.html
+permalink: contact/index.html
 eleventyNavigation:
-  key: Home
+  key: Contact
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, itaque! Dolor quas itaque iure dolorem quam possimus sapiente quia vel optio saepe incidunt temporibus, libero, veniam vero voluptatem quidem impedit!
