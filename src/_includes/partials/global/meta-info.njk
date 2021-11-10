@@ -2,7 +2,7 @@
 {% set currentUrl = metadata.url + page.url %}
 
 {% if metaTitle %}
-	{% set pageTitle = metaTitle %}
+  {% set pageTitle = metaTitle %}
 {% endif %}
 
 <title>{{ pageTitle }}</title>
@@ -15,21 +15,21 @@
 <meta property="og:url" content="{{ currentUrl }}" />
 
 {% if description %}
-	<meta name="description" content="{{ description }}" />
-	<meta name="twitter:description" content="{{ description }}" />
-	<meta property="og:description" content="{{ description }}" />
+  <meta name="description" content="{{ description }}" />
+  <meta name="twitter:description" content="{{ description }}" />
+  <meta property="og:description" content="{{ description }}" />
 {% endif %}
 
 {% if socialImage %}
-	<meta name="twitter:card" content="summary_large_image">
-	<meta property="og:image" content="{{ socialImage }}" />
-	<meta name="twitter:image" content="{{ socialImage }}" />
-	<meta property="og:image:alt" content="Page image for {{ metadata.name }}" />
-	<meta name="twitter:image:alt" content="Page image for {{ metadata.name }}" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="{{ socialImage }}" />
+  <meta name="twitter:image" content="{{ socialImage }}" />
+  <meta property="og:image:alt" content="Page image for {{ metadata.name }}" />
+  <meta name="twitter:image:alt" content="Page image for {{ metadata.name }}" />
 {% endif %}
 
 {% if site.paymentPointer %}
-	<meta name="monetization" content="{{ site.paymentPointer }}" />
+  <meta name="monetization" content="{{ site.paymentPointer }}" />
 {% endif %}
 
 <meta name="theme-color" content="{{ metadata.backgroundColor }}"/>

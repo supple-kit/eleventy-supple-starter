@@ -6,46 +6,46 @@ const shortcodes = require('./config/shortcodes');
 const watchtargets = require('./config/watch-targets');
 
 module.exports = function (eleventyConfig) {
-	// Create collections from /config/collections.js
-	Object.keys(collections).forEach((collectionName) => {
-		eleventyConfig.addCollection(collectionName, collections[collectionName]);
-	});
+  // Create collections from /config/collections.js
+  Object.keys(collections).forEach((collectionName) => {
+    eleventyConfig.addCollection(collectionName, collections[collectionName]);
+  });
 
-	// Add Eleventy plugins from /config/plugins.js
-	Object.keys(plugins).forEach((pluginName) => {
-		plugins[pluginName](eleventyConfig);
-	});
+  // Add Eleventy plugins from /config/plugins.js
+  Object.keys(plugins).forEach((pluginName) => {
+    plugins[pluginName](eleventyConfig);
+  });
 
-	// Add shortcodes from /config/shortcodes.js
-	Object.keys(shortcodes).forEach((shortcodeName) => {
-		eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
-	});
+  // Add shortcodes from /config/shortcodes.js
+  Object.keys(shortcodes).forEach((shortcodeName) => {
+    eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
+  });
 
-	// Create filers from /config/filters.js
-	Object.keys(filters).forEach((filterName) => {
-		eleventyConfig.addFilter(filterName, filters[filterName]);
-	});
+  // Create filers from /config/filters.js
+  Object.keys(filters).forEach((filterName) => {
+    eleventyConfig.addFilter(filterName, filters[filterName]);
+  });
 
-	// Get passthroughs from /config/passthroughs.js
-	Object.keys(passthroughs).forEach((passthroughName) => {
-		eleventyConfig.addPassthroughCopy(passthroughs[passthroughName]());
-	});
+  // Get passthroughs from /config/passthroughs.js
+  Object.keys(passthroughs).forEach((passthroughName) => {
+    eleventyConfig.addPassthroughCopy(passthroughs[passthroughName]());
+  });
 
-	// Watch these files for changes from /config/watchTargets.js
-	Object.keys(watchtargets).forEach((watchtargetName) => {
-		eleventyConfig.addWatchTarget(watchtargets[watchtargetName]());
-	});
+  // Watch these files for changes from /config/watchTargets.js
+  Object.keys(watchtargets).forEach((watchtargetName) => {
+    eleventyConfig.addWatchTarget(watchtargets[watchtargetName]());
+  });
 
-	return {
-		templateFormats: ['md', 'njk', 'html', 'liquid'],
+  return {
+    templateFormats: ['md', 'njk', 'html', 'liquid'],
 
-		markdownTemplateEngine: 'liquid',
-		htmlTemplateEngine: 'njk',
-		dataTemplateEngine: 'njk',
+    markdownTemplateEngine: 'liquid',
+    htmlTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk',
 
-		dir: {
-			input: 'src',
-			output: 'dist',
-		},
-	};
+    dir: {
+      input: 'src',
+      output: 'dist',
+    },
+  };
 };

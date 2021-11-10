@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		{% include "partials/global/meta-info.njk" %}
-		<link rel="stylesheet" href="/@includes/styles/styles.scss" />
-	</head>
-	<body>
-		<a href="#main-content">Skip to content</a>
-		<header>
-			<a href="/">{{ metadata.name }}</a>
-			<ul class="nav">
-			{%- for entry in collections.pages | eleventyNavigation %}
-				<li class="nav__item{% if entry.url in page.url %}  is-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-			{%- endfor %}
-			</ul>
-		</header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "partials/global/meta-info.njk" %}
+    <link rel="stylesheet" href="/@includes/styles/styles.scss" />
+  </head>
+  <body>
+    <a href="#main-content">Skip to content</a>
+    <header>
+      <a href="/">{{ metadata.name }}</a>
+      <ul class="nav">
+      {%- for entry in collections.pages | eleventyNavigation %}
+        <li class="nav__item{% if entry.url in page.url %}  is-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+      {%- endfor %}
+      </ul>
+    </header>
 
-		<main id="main-content"{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-			{% block content %}
-				<h1>{{ title }}</h1>
-				{{ content | safe }}
-			{% endblock %}
-		</main>
+    <main id="main-content"{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+      {% block content %}
+        <h1>{{ title }}</h1>
+        {{ content | safe }}
+      {% endblock %}
+    </main>
 
-		<footer></footer>
+    <footer></footer>
 
-	</body>
+  </body>
 </html>

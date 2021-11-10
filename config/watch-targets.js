@@ -3,5 +3,5 @@
  */
 
 module.exports = {
-	assets: () => './src/assets',
+  assets: () => './src/assets',
 };

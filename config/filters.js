@@ -2,9 +2,9 @@
  * Add Eleventy filters here
  */
 const markdown = require('markdown-it')({
-	html: true,
+  html: true,
 });
 
 module.exports = {
-	markdown: (value) => markdown.render(value),
+  markdown: (value) => markdown.render(value),
 };

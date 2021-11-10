@@ -4,7 +4,7 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 
 module.exports = {
-	eleventyNavigation: (eleventyConfig) => {
-		eleventyConfig.addPlugin(eleventyNavigationPlugin);
-	},
+  eleventyNavigation: (eleventyConfig) => {
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  },
 };
