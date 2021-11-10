@@ -22,6 +22,9 @@
         <h1>{{ title }}</h1>
         {{ content | safe }}
       {% endblock %}
+
+      {% set postList = collections.blog %}
+      {% include "partials/components/post-list.njk" %}
     </main>
 
     <footer></footer>
