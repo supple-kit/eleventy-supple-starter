@@ -1,6 +1,6 @@
 ---
 title: Second post
-description: Draft
+description: Second post description (Draft)
 date: 2021-11-10
 tags:
   - first tag

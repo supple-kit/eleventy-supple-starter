@@ -12,7 +12,7 @@
       <a href="/">{{ metadata.name }}</a>
       <ul>
       {%- for entry in collections.pages | eleventyNavigation %}
-        <li class="{% if entry.url in page.url %}  is-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+        <li class="{% if page.url and entry.url in page.url %}  is-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
       {%- endfor %}
       </ul>
     </header>
@@ -23,11 +23,13 @@
         {{ content | safe }}
       {% endblock %}
 
-      {% set postList = collections.blog %}
+      {% set postList = collections.posts %}
       {% include "partials/components/post-list.njk" %}
     </main>
 
-    <footer></footer>
+    <footer>
+      <mark>development: {{ global.isDevelopment }}</mark>
+    </footer>
 
   </body>
 </html>

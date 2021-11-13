@@ -3,5 +3,5 @@
  */
 module.exports = {
   pages: (collection) => collection.getFilteredByGlob('src/pages/*.md'),
-  blog: (collection) => collection.getFilteredByGlob('src/blog/*.md'),
+  posts: (collection) => collection.getFilteredByGlob('src/posts/*.md'),
 };

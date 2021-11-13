@@ -1,16 +1,12 @@
 {% if postList.length %}
   <ol reversed>
     {% for article in postList | reverse %}
-      {% if article.date and article.date.getTime() <= global.now %}
-        {% if article.data.draft === false or article.data.draft === undefined %}
-          <li>
-            <time datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }}</time>
-            <h3>
-              <a href="{{ article.url }}" rel="bookmark">{{ article.data.title }}</a>
-            </h3>
-          </li>
-        {% endif %}
-      {% endif %}
+      <li>
+        <time datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }}</time>
+        <h3>
+          <a href="{{ article.url }}" rel="bookmark">{{ article.data.title }}</a>
+        </h3>
+      </li>
     {% endfor %}
   </ol>
 {% endif %}
