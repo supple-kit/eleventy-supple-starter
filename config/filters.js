@@ -49,4 +49,22 @@ module.exports = {
       months[dateObject.getMonth()]
     } ${dateObject.getFullYear()}`;
   },
+
+  min: (...numbers) => Math.min.apply(null, numbers),
+
+  head: (array, n) => {
+    if (!Array.isArray(array) || array.length === 0) {
+      return [];
+    }
+    if (n < 0) {
+      return array.slice(n);
+    }
+
+    return array.slice(0, n);
+  },
+
+  filterTagList: (tags) =>
+    (tags || []).filter(
+      (tag) => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1,
+    ),
 };

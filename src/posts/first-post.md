@@ -3,6 +3,7 @@ title: First post
 description: First post description
 date: 2021-08-10
 tags:
+  - posts
   - first tag
   - posts with two tags
 ---

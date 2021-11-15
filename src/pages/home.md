@@ -1,7 +1,7 @@
 ---
-title: Look ma, it's eleventy-supple-starter!
-layout: layouts/base.njk
+layout: layouts/home.njk
 permalink: index.html
+title: Look ma, it's eleventy-supple-starter!
 eleventyNavigation:
   key: Home
 ---

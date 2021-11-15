@@ -6,6 +6,13 @@
         <h3>
           <a href="{{ article.url }}" rel="bookmark">{{ article.data.title }}</a>
         </h3>
+
+        {% if "draft" in article.data and article.data.draft %}
+          <mark>draft</mark>
+        {% endif %}
+        {% if article.date > global.now %}
+          <mark>future post</mark>
+        {% endif %}
       </li>
     {% endfor %}
   </ol>

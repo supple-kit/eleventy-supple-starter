@@ -1,0 +1,12 @@
+{% extends 'layouts/base.njk' %}
+{% set templateClass = 'tmpl-archive' %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+  {{ content | safe }}
+
+  {% set postList = collections.posts %}
+  {% set maxPosts = postList.length %}
+  <h2>Latest {% if maxPosts == 1 %}post{% else %}{{ maxPosts }} posts{% endif %}</h2>
+  {% include "partials/components/post-list.njk" %}
+{% endblock %}

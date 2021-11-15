@@ -3,5 +3,13 @@
   "shortName": "Short Site Name",
   "description": "Description of your Site",
   "backgroundColor": "#000000",
-  "url": "https://example.com"
+  "url": "https://example.com",
+  "genre": "Insert a schema.org genre",
+  "author": {
+    "name": "Your Name",
+    "twitterHandle": "update_me"
+  },
+  "publisher": {
+    "name": "Publisher name. Update me."
+  }
 }

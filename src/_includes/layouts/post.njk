@@ -1,0 +1,40 @@
+{% extends "layouts/base.njk" %}
+{% set templateClass = 'tmpl-post' %}
+
+{% block content %}
+  <article>
+    <h1>{{ title }}</h1>
+
+    {{ content | safe }}
+
+    <aside>
+      {% for tag in tags | filterTagList %}
+        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+      {% endfor %}
+    </aside>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ title }}",
+      "image": [],
+      "author": "{{ metadata.author.name }}",
+      "genre": "{{ metadata.genre }}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ metadata.publisher.name }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ '/img/favicon/favicon-192x192.png' }}"
+        }
+      },
+      "url": "{{ metadata.url }}{{ canonicalUrl or page.url }}",
+      "mainEntityOfPage": "{{ metadata.url }}{{ canonicalUrl or page.url }}",
+      "datePublished": "{{ page.date | htmlDateString }}",
+      "description": "{{ content | striptags | truncate(140) }}"
+    }
+    </script>
+  </article>
+{% endblock %}

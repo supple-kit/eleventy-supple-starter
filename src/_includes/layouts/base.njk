@@ -10,11 +10,13 @@
     <a href="#main-content">Skip to content</a>
     <header>
       <a href="/">{{ metadata.name }}</a>
-      <ul>
-      {%- for entry in collections.pages | eleventyNavigation %}
-        <li class="{% if page.url and entry.url in page.url %}  is-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
-      </ul>
+      <nav>
+        <ul>
+        {%- for entry in collections.pages | eleventyNavigation %}
+          <li class="{% if page.url and entry.url in page.url %}  is-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+        {%- endfor %}
+        </ul>
+      </nav>
     </header>
 
     <main id="main-content"{% if templateClass %} class="{{ templateClass }}"{% endif %}>
@@ -22,9 +24,6 @@
         <h1>{{ title }}</h1>
         {{ content | safe }}
       {% endblock %}
-
-      {% set postList = collections.posts %}
-      {% include "partials/components/post-list.njk" %}
     </main>
 
     <footer>

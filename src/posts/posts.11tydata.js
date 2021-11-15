@@ -17,8 +17,7 @@ module.exports = () => {
         showDraft(data) ? data.eleventyExcludeFromCollections : true,
       permalink: (data) =>
         showDraft(data) ? `${POSTSLUG}${data.page.fileSlug}/` : false,
-      layout: 'layouts/base.njk',
-      tags: ['posts'],
+      layout: 'layouts/post.njk',
     },
   };
 };
