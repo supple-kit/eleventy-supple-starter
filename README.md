@@ -4,7 +4,7 @@ A Supple http://11ty.dev starterkit
 
 ## Special thanks to
 
-This project relies on and stole/lent some ideas from other projects, so I'd like to credit the awesome people who came up with the ideas:
+This project relies on and stole/borrowed some ideas from other projects, so I'd like to credit the awesome people who came up with the ideas:
 
 - Zach Leatherman for his awesome little SSG [Eleventy](https://www.11ty.dev).
 - Benjamin Holmes for his outstanding work on [Slinkity](https://github.com/slinkity/slinkity).
