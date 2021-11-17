@@ -15,17 +15,38 @@ const appendSuffix = (n) => {
 };
 
 module.exports = {
-  markdown: (value) => markdown.render(value),
-
+  // dump log in output
   console: (value) => {
     return util.inspect(value);
   },
 
+  // Return lowest-valued number
+  min: (...numbers) => Math.min.apply(null, numbers),
+
+  // return the head of an array
+  head: (array, n) => {
+    if (!Array.isArray(array) || array.length === 0) {
+      return [];
+    }
+    if (n < 0) {
+      return array.slice(n);
+    }
+
+    return array.slice(0, n);
+  },
+
+  // Object helpers
+  keys: Object.keys,
+  values: Object.values,
+  entries: Object.entries,
+
+  // ISO format date string
   htmlDateString: (value) => {
     const dateObject = new Date(value);
     return dateObject.toISOString();
   },
 
+  // Pretty print date
   readableDate: (value) => {
     const dateObject = new Date(value);
 
@@ -50,19 +71,10 @@ module.exports = {
     } ${dateObject.getFullYear()}`;
   },
 
-  min: (...numbers) => Math.min.apply(null, numbers),
+  // render markdown snippets
+  markdown: (value) => markdown.render(value),
 
-  head: (array, n) => {
-    if (!Array.isArray(array) || array.length === 0) {
-      return [];
-    }
-    if (n < 0) {
-      return array.slice(n);
-    }
-
-    return array.slice(0, n);
-  },
-
+  // Filter the default tags out of the taglists
   filterTagList: (tags) =>
     (tags || []).filter(
       (tag) => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1,
