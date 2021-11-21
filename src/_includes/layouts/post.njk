@@ -8,9 +8,10 @@
     {{ content | safe }}
 
     <aside>
-      {% for tag in tags | filterTagList %}
+      <h2>Filed under:</h2>
+      {% for tag in tags | tagList %}
         {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+        <a href="{{ tagUrl | url }}">{{ tag }}</a>
       {% endfor %}
     </aside>
 

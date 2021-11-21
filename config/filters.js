@@ -75,7 +75,7 @@ module.exports = {
   markdown: (value) => markdown.render(value),
 
   // Filter the default tags out of the taglists
-  filterTagList: (tags) =>
+  tagList: (tags) =>
     (tags || []).filter(
       (tag) => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1,
     ),
