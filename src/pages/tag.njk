@@ -19,3 +19,5 @@ permalink: /tags/{{ tag | slug }}/
 
 {% set postList = collections[ tag ] %}
 {% include "partials/components/post-list.njk" %}
+
+<p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
