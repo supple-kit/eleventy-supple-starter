@@ -1,2 +1,7 @@
+# the usual
+.DS_Store
 node_modules
-dist
+
+# Eleventy/Slinkity specific
+_site
+.cache
