@@ -40,18 +40,19 @@
   ],
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-img": "^2.0.0",
     "@11ty/eleventy-navigation": "^0.3.2",
     "@supple-kit/prettier-config": "^1.0.1",
     "@supple-kit/stylelint-config-supple": "^4.0.1",
     "@supple-kit/supple-css": "^5.4.0",
-    "eslint": "^8.9.0",
+    "eslint": "^8.11.0",
     "markdown-it": "^12.3.2",
     "prettier": "^2.5.1",
-    "slinkity": "^0.6.1",
+    "slinkity": "^0.6.3",
     "stylelint": "^14.5.3",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard-scss": "^3.0.0",
-    "vite": "^2.8.4",
+    "vite": "^2.8.6",
     "vite-plugin-html": "^2.1.2"
   }
 }
