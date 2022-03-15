@@ -17,8 +17,8 @@ module.exports = function (eleventyConfig) {
   });
 
   // Add shortcodes from /config/shortcodes.js
-  Object.keys(shortcodes).forEach((shortcodeName) => {
-    eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
+  Object.keys(shortcodes).forEach((shortcodeName, index) => {
+    shortcodes[shortcodeName](eleventyConfig);
   });
 
   // Create filers from /config/filters.js
