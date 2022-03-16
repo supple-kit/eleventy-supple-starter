@@ -36,7 +36,7 @@
     background-position: center;
     opacity: 0.9;
 
-    :global(.apple ) & {
+    :global(.is-apple ) & {
       background-image: url('/@input/assets/images/share-widget/share-apple.svg');
     }
   }
