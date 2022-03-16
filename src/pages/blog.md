@@ -1,5 +1,5 @@
 ---
-layout: layouts/archive.njk
+layout: layouts/blog.njk
 permalink: blog/index.html
 title: Blog
 eleventyNavigation:
