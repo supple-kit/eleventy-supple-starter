@@ -45,6 +45,8 @@ module.exports = function (eleventyConfig) {
 
     dir: {
       input: 'src',
+      includes: 'assets/views',
+      layouts: 'assets/views/layouts',
     },
   };
 };

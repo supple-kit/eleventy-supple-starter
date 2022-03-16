@@ -1,5 +1,5 @@
 ---
-layout: layouts/tags.njk
+layout: tags.njk
 permalink: tags/index.html
 title: Tags
 ---

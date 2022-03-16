@@ -1,5 +1,5 @@
 ---
-layout: layouts/home.njk
+layout: home.njk
 permalink: index.html
 title: Look ma, it's eleventy-supple-starter!
 eleventyNavigation:
