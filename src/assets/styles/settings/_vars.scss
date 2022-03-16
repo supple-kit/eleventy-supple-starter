@@ -8,6 +8,7 @@
 / --------------------------------------------------------------------------- */
 
 @use 'node_modules/@supple-kit/supple-css/settings/defaults';
+@forward 'node_modules/@supple-kit/supple-css/settings/defaults';
 
 /**
  * If you want to override some variables of a specific Supple-CSS module you

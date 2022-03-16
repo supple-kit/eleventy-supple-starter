@@ -1,6 +1,8 @@
 {% extends "layouts/base.njk" %}
 {% set templateClass = 'tmpl-post' %}
 
+{% set shareUrl = metadata.url + page.url %}
+
 {% block content %}
   <article>
     <h1>{{ title }}</h1>
@@ -8,6 +10,8 @@
     {{ content | safe }}
 
     <aside>
+      {% include "partials/components/share-widget.njk" %}
+
       <h2>Filed under:</h2>
       {% for tag in tags | tagList %}
         {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
@@ -28,7 +32,7 @@
         "name": "{{ metadata.publisher.name }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "{{ '/img/favicon/favicon-192x192.png' }}"
+          "url": "{{ '/manifest/icon-144x144.png' }}"
         }
       },
       "url": "{{ metadata.url }}{{ canonicalUrl or page.url }}",
