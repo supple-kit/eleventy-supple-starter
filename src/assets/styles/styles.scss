@@ -20,7 +20,7 @@
     Generic
 / --------------------------------------------------------------------------- */
 
-@use 'node_modules/@supple-kit/supple-css/generic/reset';
+@use '@supple-css/generic/reset';
 
 /* --------------------------------------------------------------------------
     Elements
@@ -32,28 +32,28 @@
     Objects
 / --------------------------------------------------------------------------- */
 
-@use 'node_modules/@supple-kit/supple-css/objects/list-clean';
-@use 'node_modules/@supple-kit/supple-css/objects/layout';
-@use 'node_modules/@supple-kit/supple-css/objects/mesh';
-@use 'node_modules/@supple-kit/supple-css/objects/retain';
-@use 'node_modules/@supple-kit/supple-css/objects/aspect-ratio';
-@use 'node_modules/@supple-kit/supple-css/objects/flow';
+@use '@supple-css/objects/list-clean';
+@use '@supple-css/objects/layout';
+@use '@supple-css/objects/mesh';
+@use '@supple-css/objects/retain';
+@use '@supple-css/objects/aspect-ratio';
+@use '@supple-css/objects/flow';
 
 /* --------------------------------------------------------------------------
     Components
 / --------------------------------------------------------------------------- */
 
-@use 'components/share-widget';
+/* Add your own, yo */
 
 /* --------------------------------------------------------------------------
     Utilities
 / --------------------------------------------------------------------------- */
 
-@use 'node_modules/@supple-kit/supple-css/utilities/columns';
-@use 'node_modules/@supple-kit/supple-css/utilities/colspan';
-@use 'node_modules/@supple-kit/supple-css/utilities/colstart';
-@use 'node_modules/@supple-kit/supple-css/utilities/offset';
-@use 'node_modules/@supple-kit/supple-css/utilities/clearfix';
-@use 'node_modules/@supple-kit/supple-css/utilities/spacing';
-@use 'node_modules/@supple-kit/supple-css/utilities/visually-hidden';
-@use 'node_modules/@supple-kit/supple-css/utilities/hidden';
+@use '@supple-css/utilities/columns';
+@use '@supple-css/utilities/colspan';
+@use '@supple-css/utilities/colstart';
+@use '@supple-css/utilities/offset';
+@use '@supple-css/utilities/clearfix';
+@use '@supple-css/utilities/spacing';
+@use '@supple-css/utilities/visually-hidden';
+@use '@supple-css/utilities/hidden';

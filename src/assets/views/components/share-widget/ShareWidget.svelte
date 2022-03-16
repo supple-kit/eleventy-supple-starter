@@ -1,0 +1,45 @@
+<script>
+  export let url = '';
+
+  function tweet_(url) {
+    open(
+      'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
+      '_blank',
+    );
+  }
+
+  function share() {
+    if (navigator.share) {
+      navigator.share({
+        url: url,
+      });
+    } else if (navigator.clipboard) {
+      navigator.clipboard.writeText(url);
+    } else {
+      tweet_(url);
+    }
+  }
+</script>
+
+<style lang="scss">
+  @use '@supple-kit/supple-css/tools/space';
+  @use 'src/assets/styles/settings/vars';
+
+  .c-share-widget {
+    position: fixed;
+    inset-inline-end: space.get('base');
+    inset-block-end: space.get('base');
+    inline-size: space.get('base');
+    block-size: space.get('base');
+    background-image: url('/@input/assets/images/share-widget/share.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+
+    :global(.apple ) & {
+      background-image: url('/@input/assets/images/share-widget/share-apple.svg');
+    }
+  }
+</style>
+
+<button class="c-share-widget" on:click={share}></button>

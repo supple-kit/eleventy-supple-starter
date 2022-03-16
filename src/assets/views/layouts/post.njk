@@ -1,7 +1,7 @@
 {% extends "layouts/base.njk" %}
 {% set templateClass = 'tmpl-post' %}
 
-{% set shareUrl = metadata.url + page.url %}
+{% set shareUrl = metadata.url + page.url | safe %}
 
 {% block content %}
   <article>
@@ -10,7 +10,8 @@
     {{ content | safe }}
 
     <aside>
-      {% include "partials/components/share-widget.njk" %}
+      {% component 'components/share-widget/ShareWidget.svelte', url=shareUrl, hydrate='eager' %}
+
 
       <h2>Filed under:</h2>
       {% for tag in tags | tagList %}

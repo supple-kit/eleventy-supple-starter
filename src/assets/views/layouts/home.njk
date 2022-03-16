@@ -8,5 +8,5 @@
   {% set postList = collections.posts | head(-3) %}
   {% set maxPosts = postList.length | min(3) %}
   <h2>Latest {% if maxPosts == 1 %}post{% else %}{{ maxPosts }} posts{% endif %}</h2>
-  {% include "partials/components/post-list.njk" %}
+  {% include "templates/post-list.njk" %}
 {% endblock %}
