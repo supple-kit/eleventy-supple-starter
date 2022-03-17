@@ -1,17 +1,19 @@
 {% extends "layouts/base.njk" %}
 {% set templateClass = 'tmpl-post' %}
+{% set lastModified = page.inputPath | lastModifiedDate %}
 
 {% set shareUrl = metadata.url + page.url | safe %}
 
 {% block content %}
   <article>
     <h1>{{ title }}</h1>
+    <p>Published on: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>
+    <p>Modified on: <time datetime="{{ lastModified | htmlDateString }}">{{ lastModified | readableDate }}</time></p>
 
     {{ content | safe }}
 
     <aside>
       {% component 'components/share-widget/ShareWidget.svelte', url=shareUrl, hydrate='eager' %}
-
 
       <h2>Filed under:</h2>
       {% for tag in tags | tagList %}
@@ -39,6 +41,7 @@
       "url": "{{ metadata.url }}{{ canonicalUrl or page.url }}",
       "mainEntityOfPage": "{{ metadata.url }}{{ canonicalUrl or page.url }}",
       "datePublished": "{{ page.date | htmlDateString }}",
+      "dateModified": "{{ lastModified | htmlDateString }}",
       "description": "{{ content | striptags | truncate(140) }}"
     }
     </script>
