@@ -29,6 +29,17 @@ collections:
           - label: 'Description'
             name: 'description'
             widget: 'string'
+          - label: 'Navigation'
+            name: 'eleventyNavigation'
+            widget: 'object'
+            fields:
+              - label: 'Navigation label'
+                name: 'key'
+                widget: 'string'
+              - label: 'Order'
+                name: 'order'
+                widget: 'number'
+                default: 0
           - label: 'Body text'
             name: 'body'
             widget: 'markdown'
