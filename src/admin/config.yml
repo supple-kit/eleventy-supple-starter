@@ -40,11 +40,19 @@ collections:
             name: 'author',
             widget: 'object',
             fields:
-              - { label: 'Your name', name: 'name', widget: 'string' }
-              - { label: 'E-mail', name: 'email', widget: 'string' }
-              - { label: 'Twitter handle', name: 'twitterHandle', widget: 'string' }
+              - label: 'Your name',
+                name: 'name',
+                widget: 'string'
+              - label: 'E-mail',
+                name: 'email',
+                widget: 'string'
+              - label: 'Twitter handle',
+                name: 'twitterHandle',
+                widget: 'string'
           - label: 'Publisher',
             name: 'publisher',
             widget: 'object',
             fields:
-              - { label: 'Publisher name', name: 'name', widget: 'string' }
+              - label: 'Publisher name',
+                name: 'name',
+                widget: 'string'
