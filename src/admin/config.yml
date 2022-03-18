@@ -27,14 +27,17 @@ collections:
           - label: 'Navigation'
             name: 'eleventyNavigation'
             widget: 'object'
+            required: false
             fields:
               - label: 'Navigation label'
                 name: 'key'
                 widget: 'string'
+                required: false
               - label: 'Order'
                 name: 'order'
                 widget: 'number'
                 default: 0
+                required: false
           - label: 'Body text'
             name: 'body'
             widget: 'markdown'
@@ -54,6 +57,7 @@ collections:
           - label: 'Description'
             name: 'description'
             widget: 'string'
+            required: false
           - label: 'Body text'
             name: 'body'
             widget: 'markdown'
@@ -73,23 +77,28 @@ collections:
         name: 'permalink'
         widget: 'string'
         hint: 'Pattern: "/your-slug/index.html"'
+        required: false
       - label: 'Title'
         name: 'title'
         widget: 'string'
       - label: 'Description'
         name: 'description'
         widget: 'string'
+        required: false
       - label: 'Navigation'
         name: 'eleventyNavigation'
         widget: 'object'
+        required: false
         fields:
           - label: 'Navigation label'
             name: 'key'
             widget: 'string'
+            required: false
           - label: 'Order'
             name: 'order'
             widget: 'number'
             default: 0
+            required: false
       - label: 'Body text'
         name: 'body'
         widget: 'markdown'
@@ -109,22 +118,26 @@ collections:
         name: 'permalink'
         widget: 'string'
         hint: 'Pattern: "/blog/your-slug/index.html"'
+        required: false
       - label: 'Title'
         name: 'title'
         widget: 'string'
       - label: 'Description'
         name: 'description'
         widget: 'string'
+        required: false
       - label: 'Publish Date'
         name: 'date'
         widget: 'datetime'
       - label: 'Draft'
         name: 'daft'
         widget: 'boolean'
+        required: false
       - label: 'Tags'
         name: 'tags'
         widget: 'list'
         allow_add: true
+        required: false
       - label: 'Body text'
         name: 'body'
         widget: 'markdown'
