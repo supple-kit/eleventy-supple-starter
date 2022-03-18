@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: page.njk
 permalink: contact/index.html
 title: Contact
 eleventyNavigation:
