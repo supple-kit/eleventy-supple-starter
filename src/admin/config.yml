@@ -13,10 +13,18 @@ collections:
         delete: false
         file: 'src/_data/metadata.json'
         fields:
-          - { label: 'Site name', name: 'name', widget: 'string' }
-          - { label: 'Short site name', name: 'shortName', widget: 'string' }
-          - { label: 'Site description', name: 'description', widget: 'string' }
-          - { label: 'Theme color', name: 'themeColor', widget: 'string' }
+          - label: 'Site name',
+            name: 'name',
+            widget: 'string'
+          - label: 'Short site name',
+            name: 'shortName',
+            widget: 'string'
+          - label: 'Site description',
+            name: 'description',
+            widget: 'string'
+          - label: 'Theme color',
+            name: 'themeColor',
+            widget: 'string'
           - label: 'Background color',
             name: 'backgroundColor',
             widget: 'string',
