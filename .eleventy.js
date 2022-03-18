@@ -5,6 +5,7 @@ const filters = require('./config/filters');
 const filtersAsync = require('./config/filtersAsync');
 const shortcodes = require('./config/shortcodes');
 const watchtargets = require('./config/watch-targets');
+const transforms = require('./config/transforms');
 
 module.exports = function (eleventyConfig) {
   // Create collections from /config/collections.js
@@ -30,6 +31,11 @@ module.exports = function (eleventyConfig) {
   // Create async filters from /config/filtersAsync.js
   Object.keys(filtersAsync).forEach((filterName) => {
     eleventyConfig.addNunjucksAsyncFilter(filterName, filtersAsync[filterName]);
+  });
+
+  // Create transforms from /config/transforms.js
+  Object.keys(transforms).forEach((transformName) => {
+    eleventyConfig.addTransform(transformName, transforms[transformName]);
   });
 
   // Get passthroughs from /config/passthroughs.js
