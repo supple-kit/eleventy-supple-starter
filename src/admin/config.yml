@@ -13,46 +13,46 @@ collections:
         delete: false
         file: 'src/_data/metadata.json'
         fields:
-          - label: 'Site name',
-            name: 'name',
+          - label: 'Site name'
+            name: 'name'
             widget: 'string'
-          - label: 'Short site name',
-            name: 'shortName',
+          - label: 'Short site name'
+            name: 'shortName'
             widget: 'string'
-          - label: 'Site description',
-            name: 'description',
+          - label: 'Site description'
+            name: 'description'
             widget: 'string'
-          - label: 'Theme color',
-            name: 'themeColor',
+          - label: 'Theme color'
+            name: 'themeColor'
             widget: 'string'
-          - label: 'Background color',
-            name: 'backgroundColor',
-            widget: 'string',
-          - label: 'Your site url',
-            name: 'url',
-            widget: 'string',
-            hint: 'eg. https://your-domain.com, without trailing /',
-          - label: 'Genre',
-            name: 'genre',
-            widget: 'string',
-            hint: 'Must be a valid shema.org genre',
-          - label: 'Author',
-            name: 'author',
-            widget: 'object',
+          - label: 'Background color'
+            name: 'backgroundColor'
+            widget: 'string'
+          - label: 'Your site url'
+            name: 'url'
+            widget: 'string'
+            hint: 'eg. https://your-domain.com, without trailing /'
+          - label: 'Genre'
+            name: 'genre'
+            widget: 'string'
+            hint: 'Must be a valid shema.org genre'
+          - label: 'Author'
+            name: 'author'
+            widget: 'object'
             fields:
-              - label: 'Your name',
-                name: 'name',
+              - label: 'Your name'
+                name: 'name'
                 widget: 'string'
-              - label: 'E-mail',
-                name: 'email',
+              - label: 'E-mail'
+                name: 'email'
                 widget: 'string'
-              - label: 'Twitter handle',
-                name: 'twitterHandle',
+              - label: 'Twitter handle'
+                name: 'twitterHandle'
                 widget: 'string'
-          - label: 'Publisher',
-            name: 'publisher',
-            widget: 'object',
+          - label: 'Publisher'
+            name: 'publisher'
+            widget: 'object'
             fields:
-              - label: 'Publisher name',
-                name: 'name',
+              - label: 'Publisher name'
+                name: 'name'
                 widget: 'string'
