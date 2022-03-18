@@ -1,17 +1,17 @@
 {
-  "name": "Your Site Name",
-  "shortName": "Short Site Name",
-  "description": "Description of your Site",
-  "themeColor": "#ee4266",
-  "backgroundColor": "#ffffff",
-  "url": "https://your-domain-update-me.com",
   "genre": "Insert a schema.org genre",
+  "shortName": "Short Site Name",
   "author": {
     "name": "Your Name",
     "email": "update.me@your-domain.com",
     "twitterHandle": "update_me"
   },
+  "name": "Your Site Name Test",
+  "url": "https://your-domain-update-me.com",
+  "backgroundColor": "#ffffff",
+  "themeColor": "#ee4266",
   "publisher": {
     "name": "Publisher name. Update me."
-  }
+  },
+  "description": "Description of your Site"
 }
