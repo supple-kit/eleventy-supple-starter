@@ -6,9 +6,10 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for page in collections.all %}
   {% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  {% set lastModified = page.inputPath | lastModifiedDate %}
   <url>
     <loc>{{ absoluteUrl }}</loc>
-    <lastmod>{{ page.date | htmlDateString }}</lastmod>
+    <lastmod>{{ lastModified | htmlDateString }}</lastmod>
   </url>
 {%- endfor %}
 </urlset>
