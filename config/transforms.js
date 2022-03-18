@@ -13,21 +13,23 @@ module.exports = {
       const document = DOM.window.document;
       const main = document.querySelector('main');
 
-      /**
-       * Markdown wraps certain elements in a `p` element, here we’re gonna remove
-       * those wrappers.
-       */
-      const elementsToRemovePElement = [
-        ...main.querySelectorAll('picture, img'),
-      ];
-      elementsToRemovePElement.forEach((element) => {
-        const parent = element.closest('p');
-        if (parent && parent.nodeName === 'P') {
-          parent.replaceWith(element);
-        }
-      });
+      if (main) {
+        /**
+         * Markdown wraps certain elements in a `p` element, here we’re gonna remove
+         * those wrappers.
+         */
+        const elementsToRemovePElement = [
+          ...main.querySelectorAll('picture, img'),
+        ];
+        elementsToRemovePElement.forEach((element) => {
+          const parent = element.closest('p');
+          if (parent && parent.nodeName === 'P') {
+            parent.replaceWith(element);
+          }
+        });
 
-      // return parsed HTML
+        // return parsed HTML
+      }
       return '<!DOCTYPE html>\r\n' + document.documentElement.outerHTML;
     }
     return value;

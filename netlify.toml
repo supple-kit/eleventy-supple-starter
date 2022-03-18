@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; font-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; worker-src 'self'; connect-src 'self'"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1"
+    X-Content-Type-Options = "nosniff"
+    Permissions-Policy = "interest-cohort=()"
