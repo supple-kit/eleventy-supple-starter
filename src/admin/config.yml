@@ -130,7 +130,7 @@ collections:
         name: 'date'
         widget: 'datetime'
       - label: 'Draft'
-        name: 'daft'
+        name: 'draft'
         widget: 'boolean'
         required: false
       - label: 'Tags'
