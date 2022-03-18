@@ -13,6 +13,7 @@ collections:
         folder: 'src/pages'
         slug: '{{slug}}'
         preview_path: 'pages/{{slug}}'
+        extension: md
         create: true
         fields:
           - label: 'Layout'
