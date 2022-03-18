@@ -4,10 +4,11 @@
   "description": "Description of your Site",
   "themeColor": "#ee4266",
   "backgroundColor": "#ffffff",
-  "url": "https://example.com",
+  "url": "https://your-domain-update-me.com",
   "genre": "Insert a schema.org genre",
   "author": {
     "name": "Your Name",
+    "email": "update.me@your-domain.com",
     "twitterHandle": "update_me"
   },
   "publisher": {
