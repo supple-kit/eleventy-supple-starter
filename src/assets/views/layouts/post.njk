@@ -6,10 +6,12 @@
 {% set shareLabel = 'Share ' + title %}
 
 {% block content %}
-  <article>
-    <h1>{{ title }}</h1>
-    <p>Published on: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>
-    <p>Modified on: <time datetime="{{ lastModified | htmlDateString }}">{{ lastModified | readableDate }}</time></p>
+  <article class="o-flow">
+    <header>
+      <h1>{{ title }}</h1>
+      <p>Published on: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>
+      <p>Modified on: <time datetime="{{ lastModified | htmlDateString }}">{{ lastModified | readableDate }}</time></p>
+    </header>
 
     {{ content | safe }}
 

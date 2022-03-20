@@ -2,11 +2,13 @@
 {% set templateClass = 'tmpl-blog' %}
 
 {% block content %}
-  <h1>{{ title }}</h1>
-  {{ content | safe }}
+  <div class="o-flow">
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
 
-  {% set postList = collections.posts %}
-  {% set maxPosts = postList.length %}
-  <h2>Latest {% if maxPosts == 1 %}post{% else %}{{ maxPosts }} posts{% endif %}</h2>
-  {% include "templates/post-list.njk" %}
+    {% set postList = collections.posts %}
+    {% set maxPosts = postList.length %}
+    <h2>Latest {% if maxPosts == 1 %}post{% else %}{{ maxPosts }} posts{% endif %}</h2>
+    {% include "templates/post-list.njk" %}
+  </div>
 {% endblock %}

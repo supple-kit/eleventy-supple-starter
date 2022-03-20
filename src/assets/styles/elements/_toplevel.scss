@@ -1,0 +1,29 @@
+/* ==========================================================================
+    elements.toplevel
+    HTML, Body etc
+/ =========================================================================== */
+
+/* --------------------------------------------------------------------------
+    Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+/ --------------------------------------------------------------------------- */
+
+@use '../settings/vars';
+@use '@supple-kit/supple-css/tools/responsive';
+
+/* --------------------------------------------------------------------------
+    Module
+/ --------------------------------------------------------------------------- */
+
+html {
+  font-family: vars.$font-family;
+  font-size: responsive.lock(
+    vars.$font-size,
+    vars.$font-size-max,
+    'lap',
+    'wall'
+  );
+  color: var(--color-base-text);
+  background-color: var(--color-base-background);
+}

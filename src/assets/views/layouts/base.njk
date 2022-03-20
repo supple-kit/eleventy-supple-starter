@@ -8,27 +8,21 @@
     <link rel="stylesheet" href="/@input/assets/styles/styles.scss" />
     <script>if (/Mac OS X/.test(navigator.userAgent))document.documentElement.classList.add('is-apple');</script>
   </head>
-  <body>
-    <a href="#main-content">Skip to content</a>
-    <header>
-      <a href="/">{{ metadata.name }}</a>
-      <nav>
-        <ul>
-        {%- for entry in collections.pages | eleventyNavigation %}
-          <li class="{% if page.url and entry.url in page.url %}  is-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-        {%- endfor %}
-        </ul>
-      </nav>
-    </header>
+  <body{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    {% include "templates/masthead.njk" %}
 
-    <main id="main-content"{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <main id="main-content" class="o-retain  o-retain--desk">
       {% block content %}
-        <h1>{{ title }}</h1>
-        {{ content | safe }}
+        <div class="o-flow">
+          <h1>{{ title }}</h1>
+          {{ content | safe }}
+        </div>
       {% endblock %}
     </main>
 
-    <footer></footer>
+    <footer class="o-retain  o-retain--desk">
+      <p>Eleventy Supple Starter is part of <a href="">Supple Kit</a>, a <a href="https://bram.is"><strong>bram.is</strong></a> project.</p>
+    </footer>
 
     <script src="/@input/assets/scripts/scripts.js" type="module" />
   </body>

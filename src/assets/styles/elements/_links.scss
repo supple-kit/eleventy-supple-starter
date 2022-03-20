@@ -1,0 +1,13 @@
+/*  =========================================================================
+    elements.links
+/   ========================================================================= */
+
+a {
+  color: currentcolor;
+  text-decoration-color: var(--color-brand-primary);
+
+  &:focus,
+  &:hover {
+    color: var(--color-brand-primary);
+  }
+}

@@ -1,0 +1,34 @@
+/*  =========================================================================
+    settings.theme
+/   ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+/   ========================================================================= */
+
+@use '../settings/vars';
+@use '@supple-kit/supple-css/tools/responsive';
+
+/*  Variables
+/   ========================================================================= */
+
+:root {
+  // brand
+  --color-light: #{vars.$color-light};
+  --color-gray: #{vars.$color-gray};
+  --color-dark-gray: #{vars.$color-dark-gray};
+  --color-dark: #{vars.$color-dark};
+  --color-brand-primary: #{vars.$color-brand-primary};
+  --color-brand-secondary: #{vars.$color-brand-secondary};
+  --color-brand-tertiary: #{vars.$color-brand-tertiary};
+
+  // base colors
+  --color-base-text: var(--color-dark);
+  --color-base-background: var(--color-light);
+
+  @include responsive.color-scheme {
+    --color-base-text: var(--color-light);
+    --color-base-background: var(--color-dark);
+  }
+}
