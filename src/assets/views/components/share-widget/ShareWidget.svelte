@@ -1,5 +1,6 @@
 <script>
   export let url = '';
+  export let label = 'Share this page';
 
   function tweet_(url) {
     open(
@@ -42,4 +43,4 @@
   }
 </style>
 
-<button class="c-share-widget" on:click={share}></button>
+<button class="c-share-widget" on:click={share}><span class="u-visually-hidden">{label}</span></button>

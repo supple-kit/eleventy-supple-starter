@@ -3,6 +3,7 @@
 {% set lastModified = page.inputPath | lastModifiedDate %}
 
 {% set shareUrl = metadata.url + page.url | safe %}
+{% set shareLabel = 'Share ' + title %}
 
 {% block content %}
   <article>
@@ -13,7 +14,7 @@
     {{ content | safe }}
 
     <aside>
-      {% component 'components/share-widget/ShareWidget.svelte', url=shareUrl, hydrate='eager' %}
+      {% component 'components/share-widget/ShareWidget.svelte', url=shareUrl, label=shareLabel, hydrate='eager' %}
 
       <h2>Filed under:</h2>
       {% for tag in tags | tagList %}
