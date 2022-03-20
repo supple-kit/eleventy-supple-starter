@@ -20,6 +20,7 @@
     Generic
 / --------------------------------------------------------------------------- */
 
+@use 'generic/fonts';
 @use '@supple-css/generic/reset';
 @use 'generic/theme';
 
@@ -36,7 +37,7 @@
 / --------------------------------------------------------------------------- */
 
 // @use '@supple-css/objects/list-clean';
-// @use '@supple-css/objects/layout';
+@use '@supple-css/objects/layout';
 // @use '@supple-css/objects/mesh';
 @use '@supple-css/objects/retain';
 // @use '@supple-css/objects/aspect-ratio';
@@ -46,7 +47,8 @@
     Components
 / --------------------------------------------------------------------------- */
 
-/* Add your own, yo */
+@use '@templates/masthead/masthead';
+@use '@templates/logo/logo';
 
 /* --------------------------------------------------------------------------
     Utilities

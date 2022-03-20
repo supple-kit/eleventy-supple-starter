@@ -9,20 +9,23 @@
     <script>if (/Mac OS X/.test(navigator.userAgent))document.documentElement.classList.add('is-apple');</script>
   </head>
   <body{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-    {% include "templates/masthead.njk" %}
+    <a href="#main-content">Skip to content</a>
+    <div class="o-flow">
+      {% include "templates/masthead/masthead.njk" %}
 
-    <main id="main-content" class="o-retain  o-retain--desk">
-      {% block content %}
-        <div class="o-flow">
-          <h1>{{ title }}</h1>
-          {{ content | safe }}
-        </div>
-      {% endblock %}
-    </main>
+      <main id="main-content" class="o-retain  o-retain--lap">
+        {% block content %}
+          <div class="o-flow">
+            <h1>{{ title }}</h1>
+            {{ content | safe }}
+          </div>
+        {% endblock %}
+      </main>
 
-    <footer class="o-retain  o-retain--desk">
-      <p>Eleventy Supple Starter is part of <a href="">Supple Kit</a>, a <a href="https://bram.is"><strong>bram.is</strong></a> project.</p>
-    </footer>
+      <footer class="o-retain  o-retain--lap">
+        <p>Eleventy Supple Starter is part of <a href="">Supple Kit</a>, a <a href="https://bram.is"><strong>bram.is</strong></a> project.</p>
+      </footer>
+    </div>
 
     <script src="/@input/assets/scripts/scripts.js" type="module" />
   </body>

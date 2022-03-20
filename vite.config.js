@@ -10,6 +10,7 @@ export default defineConfig({
         './node_modules/@supple-kit/supple-css/',
       ),
       '@styles': path.resolve(__dirname, './src/assets/styles'),
+      '@templates': path.resolve(__dirname, './src/assets/views/templates'),
     },
   },
   plugins: [minifyHtml()],

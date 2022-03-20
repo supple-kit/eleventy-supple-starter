@@ -13,6 +13,15 @@
 /*  Module
 /   ========================================================================= */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: vars.$font-family-leader;
+}
+
 h1 {
   @include typography.font-size(vars.$font-size-alpha);
 }

@@ -1,0 +1,38 @@
+/* ==========================================================================
+    templates.logo
+/ =========================================================================== */
+
+/* --------------------------------------------------------------------------
+    Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+/ --------------------------------------------------------------------------- */
+
+@use '@styles/settings/vars';
+@use '@supple-kit/supple-css/tools/rem';
+@use '@supple-kit/supple-css/tools/space';
+@use '@supple-kit/supple-css/tools/typography';
+
+/* --------------------------------------------------------------------------
+    Variables
+/ --------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+    Functions/Mixins
+/ --------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+    Module
+/ --------------------------------------------------------------------------- */
+
+.c-logo {
+  --gap: #{space.get(small)};
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.c-logo__wrap-image {
+  max-inline-size: rem.convert(vars.$baseline * 12);
+  margin-inline: auto;
+}
