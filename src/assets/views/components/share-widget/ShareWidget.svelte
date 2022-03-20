@@ -23,8 +23,8 @@
 </script>
 
 <style lang="scss">
-  @use '@supple-kit/supple-css/tools/space';
   @use 'src/assets/styles/settings/vars';
+  @use '@supple-kit/supple-css/tools/space';
 
   .c-share-widget {
     position: fixed;
