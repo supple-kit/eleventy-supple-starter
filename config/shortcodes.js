@@ -4,6 +4,9 @@
 const path = require('path');
 const Image = require('@11ty/eleventy-img');
 
+const siteMetaData = require('../src/_data/metadata.json');
+const cachebuster = Math.round(new Date().getTime() / 1000);
+
 module.exports = {
   /**
    * image: uses `eleventy-img`, for full configuration please check
@@ -46,5 +49,24 @@ module.exports = {
     eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
     eleventyConfig.addLiquidShortcode('image', imageShortcode);
     eleventyConfig.addJavaScriptFunction('image', imageShortcode);
+  },
+
+  ogImageSource: function (eleventyConfig) {
+    eleventyConfig.addNunjucksShortcode(
+      'ogImageSource',
+      function ({ url, inputPath }) {
+        // special title og images, only for _posts
+        if (inputPath.startsWith('./src/posts/')) {
+          return `https://screenshot.bram.is/${encodeURIComponent(
+            `${siteMetaData.url}/opengraph${url}`,
+          )}/opengraph/_${cachebuster}`;
+        }
+
+        // raw screenshot
+        return `https://screenshot.bram.is/${encodeURIComponent(
+          `${siteMetaData.url}${url}`,
+        )}/opengraph/_${cachebuster}`;
+      },
+    );
   },
 };

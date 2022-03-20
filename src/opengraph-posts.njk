@@ -1,0 +1,18 @@
+---
+pagination:
+  data: "collections.posts"
+  size: 1
+  alias: "post"
+layout: og.njk
+permalink: "/opengraph{{ post.url }}"
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  sourceUrl: "{{metadata.url}}{{ post.url }}"
+---
+
+{% block head %}{% endblock %}
+
+<main>
+  <h1>{{post.data.title}}</h1>
+  <p>By: {{metadata.author.name}}</p>
+</main>
