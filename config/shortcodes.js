@@ -5,6 +5,7 @@ const path = require('path');
 const Image = require('@11ty/eleventy-img');
 
 const siteMetaData = require('../src/_data/metadata.json');
+const { screenShotService } = require('../src/_data/global');
 const cachebuster = Math.round(new Date().getTime() / 1000);
 
 module.exports = {
@@ -57,13 +58,13 @@ module.exports = {
       function ({ url, inputPath }) {
         // special title og images, only for _posts
         if (inputPath.startsWith('./src/posts/')) {
-          return `https://screenshot.bram.is/${encodeURIComponent(
+          return `${screenShotService}/${encodeURIComponent(
             `${siteMetaData.url}/opengraph${url}`,
           )}/opengraph/_${cachebuster}`;
         }
 
         // raw screenshot
-        return `https://screenshot.bram.is/${encodeURIComponent(
+        return `${screenShotService}/${encodeURIComponent(
           `${siteMetaData.url}${url}`,
         )}/opengraph/_${cachebuster}`;
       },
