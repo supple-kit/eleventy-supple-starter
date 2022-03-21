@@ -20,8 +20,8 @@
     Generic
 / --------------------------------------------------------------------------- */
 
-@use 'generic/fonts';
 @use '@supple-css/generic/reset';
+@use 'generic/fonts';
 @use 'generic/theme';
 
 /* --------------------------------------------------------------------------
@@ -47,8 +47,8 @@
     Components
 / --------------------------------------------------------------------------- */
 
-@use '@templates/masthead/masthead';
-@use '@templates/logo/logo';
+@use '@components/masthead/masthead';
+@use '@components/logo/logo';
 
 /* --------------------------------------------------------------------------
     Utilities

@@ -11,7 +11,7 @@
   <body{% if templateClass %} class="{{ templateClass }}"{% endif %}>
     <a href="#main-content">Skip to content</a>
     <div class="o-flow">
-      {% include "templates/masthead/masthead.njk" %}
+      {% include "components/masthead/masthead.njk" %}
 
       <main id="main-content" class="o-retain  o-retain--lap">
         {% block content %}
