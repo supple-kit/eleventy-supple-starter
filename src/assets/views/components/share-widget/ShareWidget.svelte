@@ -32,13 +32,13 @@
     inset-block-end: space.get('base');
     inline-size: space.get('base');
     block-size: space.get('base');
-    background-image: url('/@input/assets/images/share-widget/share.svg');
+    background-image: url('./share.svg');
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.9;
 
     :global(.is-apple ) & {
-      background-image: url('/@input/assets/images/share-widget/share-apple.svg');
+      background-image: url('./share-apple.svg');
     }
   }
 </style>
