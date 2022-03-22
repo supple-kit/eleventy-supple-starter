@@ -14,6 +14,10 @@
 /   ========================================================================= */
 
 :root {
+  // fonts
+  --font-family-base: #{vars.$font-family-base};
+  --font-family-leading: #{vars.$font-family-leading};
+
   // brand
   --color-light: #{vars.$color-light};
   --color-gray: #{vars.$color-gray};
