@@ -2,4 +2,18 @@
     generic.fonts
 / =========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap');
+@font-face {
+  font-family: Untitled Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: url('/@input/assets/fonts/UntitledSansWeb-Regular.woff2');
+}
+
+@font-face {
+  font-family: Untitled Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
+  src: url('/@input/assets/fonts/UntitledSansWeb-Medium.woff2');
+}

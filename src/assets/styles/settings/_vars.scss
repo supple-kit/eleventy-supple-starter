@@ -43,10 +43,11 @@ $font-size-epsilon: defaults.$baseline * 2.5 !default;
 $font-size-zeta: defaults.$baseline * 2.5 !default;
 
 // Font family
-$font-family-base: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
-  'Helvetica Neue', 'Arial', 'Noto Sans', 'Liberation Sans', sans-serif,
-  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
-$font-family-leader: 'Nunito Sans', $font-family-base !default;
+$font-family-base: 'Untitled Sans', -apple-system, 'BlinkMacSystemFont',
+  'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans',
+  'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol' !default;
+$font-family-leader: $font-family-base !default;
 
 /**
  * Colors
