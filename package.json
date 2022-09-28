@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "echo \"Add linting\" && exit 1",
-    "start": "npx slinkity --serve --incremental",
-    "build": "npx slinkity"
+    "start": "eleventy --serve --incremental --quiet",
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
@@ -39,26 +39,26 @@
     }
   ],
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-img": "^2.0.0",
     "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
-    "@slinkity/renderer-svelte": "^0.1.6",
+    "@slinkity/renderer-svelte": "^1.0.0",
     "@supple-kit/prettier-config": "^1.0.1",
     "@supple-kit/stylelint-config-supple": "^4.0.1",
     "@supple-kit/supple-css": "^5.4.0",
-    "eslint": "^8.11.0",
+    "eslint": "^8.13.0",
     "jsdom": "^19.0.0",
     "markdown-it": "^12.3.2",
-    "prettier": "^2.6.0",
+    "prettier": "^2.6.2",
     "promisify": "^0.0.3",
-    "slinkity": "^0.6.4",
-    "stylelint": "^14.6.0",
+    "slinkity": "^0.8.2",
+    "stylelint": "^14.7.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard-scss": "^3.0.0",
-    "svelte": "^3.46.4",
+    "svelte": "^3.47.0",
     "util": "^0.12.4",
-    "vite": "^2.8.6",
+    "vite": "^2.9.5",
     "vite-plugin-html": "^2.1.2"
   }
 }

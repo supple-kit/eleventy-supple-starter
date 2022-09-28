@@ -26,7 +26,7 @@ module.exports = {
       let metadata = await Image(src, {
         widths: parsedWidths,
         formats,
-        outputDir: path.join(process.env.ELEVENTY_BUILD_OUTPUT_DIR, 'img'),
+        outputDir: path.join('_site', 'img'),
         sharpOptions: {
           animated: src.endsWith('.gif'),
         },
